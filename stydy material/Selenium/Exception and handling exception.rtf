@@ -1,0 +1,165 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs28\lang9 Types of Exceptions in Selenium Webdriver\par
+1. ElementNotVisibleException: This type of Selenium exception occurs when an existing element in DOM has a feature set as hidden.\par
+\par
+2. ElementNotSelectableException: This Selenium exception occurs when an element is presented in the DOM, but you can be able to select. Therefore, it is not possible to interact.\par
+\par
+3. NoSuchElementException: This Exception occurs if an element could not be found.\par
+\par
+4. NoSuchFrameException: This Exception occurs if the frame target to be switched to does not exist.\par
+\par
+5. NoAlertPresentException: This Exception occurs when you switch to no presented alert.\par
+6. NoSuchWindowException: This Exception occurs if the window target to be switch does not exist.\par
+\par
+7. StaleElementReferenceException: This Selenium exception occurs happens when the web element is detached from the current DOM.\par
+\par
+8. SessionNotFoundException: The WebDriver is acting after you quit the browser.\par
+\par
+9. TimeoutException: Thrown when there is not enough time for a command to be completed. For Example, the element searched wasn\rquote t found in the specified time.\par
+\par
+10. WebDriverException: This Exception takes place when the WebDriver is acting right after you close the browser.\par
+\par
+11. ConnectionClosedException: This type of Exception takes place when there is a disconnection in the driver.\par
+\par
+12. ElementClickInterceptedException: The command may not be completed as the element receiving the events is concealing the element which was requested clicked.\par
+\par
+13. ElementNotInteractableException: This Selenium exception is thrown when any element is presented in the DOM. However, it is impossible to interact with such an element.\par
+\par
+14. ErrorInResponseException: This happens while interacting with the Firefox extension or the remote driver server.\par
+\par
+15. ErrorHandler.UnknownServerException: Exception is used as a placeholder in case if the server returns an error without a stack trace.\par
+\par
+16. ImeActivationFailedException: This expectation will occur when IME engine activation has failed.\par
+\par
+17. ImeNotAvailableException: It takes place when IME support is unavailable.\par
+\par
+18. InsecureCertificateException: Navigation made the user agent to hit a certificate warning. This can cause by an invalid or expired TLS certificate.\par
+\par
+19. InvalidArgumentException: It occurs when an argument does not belong to the expected type.\par
+\par
+20. InvalidCookieDomainException: This happens when you try to add a cookie under a different domain instead of current URL.\par
+\par
+21. InvalidCoordinatesException: This type of Exception matches an interacting operation that is not valid.\par
+\par
+22. InvalidElementStateException: It occurs when command can\rquote t be finished when the element is invalid.\par
+\par
+23. InvalidSessionIdException: This Exception took place when the given session ID is not included in the list of active sessions. It means the session does not exist or is inactive either.\par
+\par
+24. InvalidSwitchToTargetException: This occurs when the frame or window target to be switched does not exist.\par
+\par
+25. JavascriptException: This issue occurs while executing JavaScript given by the user.\par
+\par
+26. JsonException: It occurs when you afford to get the session when the session is not created.\par
+\par
+27. NoSuchAttributeException: This kind of Exception occurs when the attribute of an element could not be found.\par
+\par
+28. MoveTargetOutOfBoundsException: It takes place if the target provided to the ActionChains move() methodology is not valid. For Example, out of the document.\par
+\par
+29. NoSuchContextException: ContextAware does mobile device testing.\par
+\par
+30. NoSuchCookieException: This Exception occurs when no cookie matching with the given pathname found for all the associated cookies of the currently browsing document.\par
+\par
+31. NotFoundException: This Exception is a subclass of WebDriverException. This will occur when an element on the DOM does not exist.\par
+\par
+32. RemoteDriverServerException: This Selenium exception is thrown when the server is not responding because of the problem that the capabilities described are not proper.\par
+\par
+33. ScreenshotException: It is not possible to capture a screen.\par
+34. SessionNotCreatedException: It happens when a new session could not be successfully created.\par
+\par
+35. UnableToSetCookieException: This occurs if a driver is unable to set a cookie.\par
+\par
+36. UnexpectedTagNameException: Happens if a support class did not get a web element as expected.\par
+\par
+37. UnhandledAlertException: This expectation occurs when there is an alert, but WebDriver is not able to perform Alert operation.\par
+\par
+38. UnexpectedAlertPresentException: It occurs when there is the appearance of an unexpected alert.\par
+\par
+39. UnknownMethodException: This Exception happens when the requested command matches with a known URL but and not matching with a methodology for a specific URL.\par
+\par
+40. UnreachableBrowserException: This Exception occurs only when the browser is not able to be opened or crashed because of some reason.\par
+\par
+41. UnsupportedCommandException: This occurs when remote WebDriver doesn\rquote t send valid commands as expected.\par
+\par
+How to Handling Exceptions in Selenium\par
+Here, are some important standard using which you can handle Exceptions in Selenium WebDriver:\par
+\par
+Step 1) Try-catch\par
+\par
+This method can catch Exceptions, which uses a combination of the try and catch keywords. Try command indicates the start of the block, and Catch is placed at the end of the try block, which helps to resolve the Exception.\par
+\par
+try\par
+\{\par
+// Code\par
+\} catch (Exception e) \{\par
+// Code for Handling exception\par
+\}\par
+Step 2) Multiple catch blocks\par
+\par
+There are various types of Exceptions, and you can expect more than one exception from a single block of code. Multiple catches help you to handle every type of Exception separately with a separate block of code. It can be used for more than two catch blocks, and there is no limitation on the number of catch blocks.\par
+\par
+try\par
+\{\par
+//Code\par
+\} catch (ExceptionType1 e1) \{\par
+//Code for Handling Exception 1\par
+\} catch (ExceptionType2 e2) \{\par
+//Code for Handling Exception 2\par
+\}\par
+Step 3) Throw\par
+\par
+When you want to generate an Exception, the Throw keyword is used to throw Exception to handle it in the run time. When you are throwing an Exception without handling it, then they need to use Throw keyword.\par
+\par
+public static void anyFunction() throws Exception\{\par
+\par
+try \{\par
+// write your code here\par
+\} Catch (Exception b) \{\par
+// Do whatever you want to perform \par
+// Throw the Exception back to the system\par
+throw(b);\par
+\}\par
+\}\par
+Step 4) Multiple Exceptions\par
+\par
+You can mention various Exceptions in the throws clause.\par
+\par
+public static void anyFunction() throws ExceptionType1, ExceptionType2\{\par
+\par
+try \{\par
+// write your code here\par
+\} catch (ExceptionType1 e1) \{\par
+// Code to handle exception 1\par
+\} catch (ExceptionType1 e2) \{\par
+// Code to handle exception 2\par
+\}\par
+Step 5) Finally\par
+\par
+The Final keyword is used to create a block of code under the try block. It is the final code that helps you to executes irrespective of the occurrence of an exception\par
+\par
+try \{\par
+//Code\par
+\} catch (ExceptionType1 e1) \{\par
+//Catch block\par
+\} catch (ExceptionType2 e2) \{\par
+//Catch block\par
+\} catch (ExceptionType3 e3) \{\par
+//Catch block\par
+\} finally \{\par
+//The finally block always executes.\par
+\}\par
+Methods for displaying Exception\par
+You can also use the following methods to display Exception Information:\par
+printStackTrace(): This function prints stack trace, name of the Exception, and other useful description.\par
+toString(): This function returns a text message describing the exception name and description.\par
+getMessage(): Helps to displays the description of the Exception.\par
+Summary:\par
+An exception is an error that happens at the time of execution of a program.\par
+Try-catch: This method can catch Exceptions, which uses a combination of the try and catch keywords.\par
+Multiple catches help you to handle every type of Exception separately with a separate block of code.\par
+Throw keyword is used to throw Exception to handle it in the run time.\par
+printStackTrace(): This function prints stack trace, name of the Exception, and other useful description\par
+toString(): This function returns a text message describing the exception name and description.\par
+getMessage(): Helps to displays the description of the Exception.\par
+}
+ 
